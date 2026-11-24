@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><meta name="referrer" content="no-referrer">
+<title>우리가족 우체통 초대장</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#FFF4CC;color:#3B3226;font:19px/1.55 system-ui,"Noto Sans KR",sans-serif;word-break:keep-all}
+main{max-width:520px;margin:0 auto;padding:24px 18px 60px;display:grid;gap:18px}
+h1{font-size:30px;margin:8px 0 0;text-align:center}p{margin:0}
+.sub{text-align:center}
+a.btn{display:flex;align-items:center;gap:14px;background:#FFC93C;color:#3B3226;text-decoration:none;border-radius:999px;padding:18px 22px;font-size:26px;font-weight:800;box-shadow:0 6px 0 rgba(120,90,10,.25)}
+a.btn i{font-style:normal;flex:none;width:46px;height:46px;border-radius:50%;background:#FFFDF6;display:grid;place-items:center}
+a.btn.web{background:#FFFDF6;border:3px solid #3B3226;font-size:22px;justify-content:center;box-shadow:none}
+a.btn.two{background:#FF6B4A;color:#fff}a.btn.two i{color:#3B3226}
+.card{background:#FFFDF6;border-radius:22px;padding:16px;display:grid;gap:10px}
+.card b{font-size:21px}.card em{font-style:normal;font-weight:800;color:#D9432A}
+.card img{width:100%;border-radius:12px;display:block}
+.small{font-size:16px;color:#75654D;text-align:center}
+#no{display:none;background:#FFE1DA;border-radius:16px;padding:14px;text-align:center}
+</style><script>
+/* 카톡 같은 앱 안의 브라우저에서 열리면 기기의 진짜 브라우저로 넘겨요 (저장과 홈 화면 추가가 거기서만 제대로 돼요) */
+(function(){ if(window.Android) return; var ua=navigator.userAgent, kakao=/KAKAOTALK/i.test(ua), other=/Instagram|FBAN|FBAV|Line\/|everytimeApp/i.test(ua);
+  if(!kakao&&!other) return;
+  var go=function(){ if(kakao) location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(location.href);
+    else if(/Android/i.test(ua)) location.href='intent://'+location.host+location.pathname+location.search+'#Intent;scheme=https;package=com.android.chrome;end'; };
+  document.addEventListener('DOMContentLoaded',function(){ var d=document.createElement('div'); d.setAttribute('style','position:fixed;inset:0;z-index:99;background:#FFF4CC;color:#3B3226;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:28px;text-align:center;font:20px/1.6 system-ui,sans-serif');
+    d.innerHTML='<b style="font-size:26px">다른 브라우저에서 열어 주세요</b><span>'+(kakao?'크롬 같은 브라우저로 넘어가는 중이에요.<br>안 넘어가면 아래 단추를 눌러 주세요.':'화면 구석의 ⋮ 또는 ··· 를 누르고<br>「다른 브라우저로 열기」를 눌러 주세요.')+'</span>'+(kakao?'<button id="xgo" style="font:800 22px system-ui;padding:16px 28px;border:0;border-radius:999px;background:#FFC93C;color:#3B3226">다른 브라우저로 열기</button>':'');
+    document.body.appendChild(d); var b=document.getElementById('xgo'); if(b) b.onclick=go; if(kakao) setTimeout(go,300); });
+})();
+</script>
+</head><body><main>
+<h1>우리가족 우체통</h1>
+<p class="sub">큰 단추 <b>1번</b>, <b>2번</b>을 차례로 누르세요.</p>
+<p id="no">초대 링크가 온전하지 않아요. 받은 링크를 처음부터 끝까지 다시 눌러 주세요.</p>
+<a class="btn" href="woochetong.apk"><i>1</i>앱 깔기</a>
+<div class="card"><b>1번을 누르면 겁주는 창이 세 번 떠요. 괜찮아요!</b>
+  <p style="background:#FFE1DA;border:3px solid #3B3226;border-radius:14px;padding:12px 14px"><b>맨 먼저 「출처를 알 수 없는 앱 차단됨」이 뜨면</b><br>삼성 폰의 보호 기능이 켜져 있어서 그래요. 이렇게 잠깐 꺼 주세요.<br>
+    <em>설정</em> → <em>보안 및 개인정보 보호</em> → <em>보안 위험 자동 차단</em> → 스위치 <em>끄기</em><br>그다음 다시 설치하면 돼요. <b>설치가 끝나면 같은 곳에서 다시 켜 두세요.</b></p><img src="img/in0.jpg" alt="출처를 알 수 없는 앱 차단됨 창">
+  <p>① 「유해한 파일일 수도 있음」 → <em>무시하고 다운로드</em></p><img src="img/in1.jpg" alt="무시하고 다운로드를 누르는 창">
+  <p style="background:#FFE08A;border:3px solid #3B3226;border-radius:14px;padding:12px 14px;font-weight:800;font-size:19px">카카오톡에서 받았다면, 「내 파일」 앱에 들어가야 내려받은 파일이 보여요!</p>
+<p>② 내려받은 파일을 누르세요. 안 보이면 「내 파일」 앱 → 「다운로드」 안의 <em>woochetong.apk</em>를 누르세요.</p><img src="img/in4.jpg" alt="내 파일 앱" style="max-width:170px">
+  <p>③ 「앱 설치가 권장되지 않음」 → <em>무시하고 설치</em></p><img src="img/in2.jpg" alt="무시하고 설치를 누르는 창">
+  <p>④ 「앱 검사 권장됨」 → <em>앱 검사</em> (잠깐 기다리면 설치돼요)</p><img src="img/in3.jpg" alt="앱 검사를 누르는 창">
+  <p>가족이 직접 만든 앱이라 스토어에 없어서 뜨는 안내예요.</p>
+  <p>설치가 끝나면 「완료」를 누르고 <b>이 화면으로 돌아와</b> 2번을 누르세요.</p></div>
+<p style="background:#FFE08A;border:3px solid #3B3226;border-radius:16px;padding:14px;font-weight:800;font-size:21px;text-align:center">다운로드와 설치를 마치면<br>다시 이 초대장으로 돌아오세요!!!<br><span style="font-size:17px;font-weight:600">돌아와서 아래 2번을 누르면 돼요 ↓</span></p>
+<a class="btn two" id="go" href="#"><i>2</i>우리 가족 들어가기</a>
+<p class="small">2번을 누르면 우체통 앱이 열려요.<br>가족 비번 숫자 4개를 누르고 내 얼굴을 고르면 끝!</p>
+<p class="small">앱은 안드로이드 폰과 태블릿에서만 깔려요. 막히면 가족에게 전화 주세요.</p>
+<div class="card" style="margin-top:14px"><b>설치가 어렵다면?</b>
+  <a class="btn web" id="web" href="#">웹으로 바로 이용 →</a>
+  <p>앱을 깔지 않고 이 브라우저에서 바로 써요. 대신 이런 건 안 돼요.</p>
+  <p>· <em>알림을 받을 수 없어요.</em> 화면을 열어야 새 편지가 보여요.</p>
+  <p>· 태블릿에서 편지 창이 저절로 뜨거나 소리 내어 읽어 주지 않아요.</p>
+  <p>· 인터넷 사용 기록을 지우면 초대장으로 다시 들어와야 해요.</p>
+  <p><b style="font-size:21px">바탕화면에 저장해 두는 법</b><br>웹으로 연 다음, 쓰는 브라우저에 맞춰 따라 하세요. 바탕화면에 우체통이 생겨요.</p>
+  <p><b>네이버 앱</b> · 오른쪽 아래 ≡ 를 누르고 → <em>홈 화면에 추가</em></p><img src="img/n1.jpg" alt="네이버 앱 아래쪽 메뉴 단추"><img src="img/n2.jpg" alt="네이버 앱의 홈 화면에 추가">
+  <p><b>크롬</b> · 오른쪽 위 ⋮ 를 누르고 → <em>설치 및 바로가기 만들기</em> → <em>바로가기 만들기</em> → <em>추가</em></p><img src="img/c1.jpg" alt="크롬 메뉴의 설치 및 바로가기 만들기"><img src="img/c2.jpg" alt="바로가기 만들기"><img src="img/c3.jpg" alt="추가 누르기">
+  <p><b>삼성 인터넷</b> · 오른쪽 아래 ≡ 를 누르고 → <em>현재 페이지 추가</em> → <em>홈 화면</em></p><img src="img/s1.jpg" alt="삼성 인터넷 메뉴의 현재 페이지 추가"><img src="img/s2.jpg" alt="홈 화면 고르기">
+</div>
+</main>
+<script>
+// 초대 내용은 주소의 # 뒤에만 있어요. 이 페이지는 그것을 어디에도 보내지 않고 앱으로만 넘겨요.
+var h=location.hash.slice(1), ok=/^j=[A-Za-z0-9_-]{20,400}$/.test(h), go=document.getElementById('go');
+var web=document.getElementById('web');
+if(ok){ go.href='woochetong://join#'+h; web.href='app/#'+h; } else { web.href='app/'; document.getElementById('no').style.display='block'; go.removeAttribute('href'); go.style.opacity=.4; }
+</script></body></html>
